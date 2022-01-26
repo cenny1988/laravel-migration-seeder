@@ -17,7 +17,13 @@ class CreateSongsTable extends Migration
             $table->id();
 
             $table->string('name', 60)->unique();
-            $table->time('time');
+            $table->unsignedInteger('duration');
+            $table->text('lyric')->nullable();
+            $table->integer('price')->unsigned();
+            $table->string('genre', 20);
+            $table->unsignedTinyInteger('rating')->default(0);
+            $table->boolean('explicit')->default(false);
+            $table->boolean('single')->default(false);
 
             $table->timestamps();
         });
