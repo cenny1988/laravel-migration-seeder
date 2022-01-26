@@ -21,8 +21,8 @@ class CreateAlbumsTable extends Migration
             $table->bigInteger('views');
             $table->bigInteger('sells');
             $table->string('cover')->nullable();
-            $table->string('label', 60);
-            $table->string('imei', 60)->unique();
+            $table->string('label');
+            $table->string('imei')->unique();
             $table->integer('price');
             $table->string('record_company');
 
