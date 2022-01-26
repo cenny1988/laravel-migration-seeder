@@ -16,10 +16,13 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name', 60)->unique();
-            $table->date('year');
-            $table->string('imei', 60)->unique();
             $table->string('title', 60)->unique();
+            $table->date('release');
+            $table->bigInteger('views');
+            $table->bigInteger('sells');
+            $table->string('cover')->nullable();
+            $table->string('label', 60);
+            $table->string('imei', 60)->unique();
             $table->integer('price');
             $table->string('record_company');
 
