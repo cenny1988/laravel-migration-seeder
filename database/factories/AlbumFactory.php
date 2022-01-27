@@ -10,9 +10,9 @@ $factory->define(Album::class, function (Faker $faker) {
         
         'title' => $faker->name(),
         'release' => $faker->date(),
-        'views' => $faker->numberBetween(),
-        'sells' => $faker->numberBetween(),
-        'cover' => $faker->word(),
+        'views' => $faker->randomNumber(3),
+        'sells' => $faker->randomNumber(3),
+        'cover' => $faker->word() . ".png",
         'label' => $faker->sentence(),
         'imei' => $faker->regexify('[A-Z]{5}[0-4]{3}'),
         'price' => $faker->numberBetween(500, 10000),

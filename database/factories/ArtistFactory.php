@@ -10,11 +10,10 @@ $factory->define(Artist::class, function (Faker $faker) {
        
         'name' => $faker->firstName(),
         'lastname' => $faker->lastName(),
-        'stagename' => $faker->name(),
+        'stagename' => $faker->userName(),
         'date_of_birth' => $faker->date(),
         'birth_city' => $faker->citySuffix(),
-        'genre' => $faker->randomElement(['male', 'female']),
-        
+        'genre' => $faker->randomElement(['male', 'female', 'other']),
         'email' => $faker->email(),
         'phone' => $faker->numberBetween(),
         'web-site' => $faker->url(),
